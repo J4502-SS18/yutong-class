@@ -46,13 +46,13 @@ img {
 	font-family: 'Merriweather Sans',Helvetica, sans-serif;
 	padding: 0;
 	list-style-type: none;
-	margin-top: 5px; 
+	margin-top: 5px;
 }
 #nav li{
 	margin: 0;
 	padding:0;
 	float:left;
-	width: 33%;
+	width: 33.3%;
 }
 #nav a:link, #nav a:visited{
   color:#ffffff;
