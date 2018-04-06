@@ -59,7 +59,7 @@ img {
 	display: none;
 }
 
-/*-------end of header----------------*/
+/*-articles-*/
 
 .atitle{
 	font-family: 'PT Sans', Helvetica, sans-serif;
@@ -86,6 +86,8 @@ article:last-of-type{
 	padding:8px;
 }
 
+/*-footer-*/
+
 footer{
 	display: block;
 	font-size:10px;
@@ -94,9 +96,9 @@ footer{
 	border-top:1px solid black;
 }
 
-/*These styles activate when the page is larger than 800px wide*/
+/*These styles activate when the size of page changese*/
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 600px) {
 	nav ul{
 		flex-direction: row;
 		justify-content:space-between;
@@ -136,26 +138,12 @@ footer{
 		.forwide{
 			display: none;
 		}
+		#container{
+			width:95%;
+			margin:0 auto;
+		}
 }
 
-@media screen and (min-width: 600px) {
-
-  #container{
-    width: 95%;
-		margin-left:auto;
-		margin-right:auto;
-  }
-	.intro{
-		padding-left: 10px;
-	}
-	article{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.forwide{
-		display: none;
-	}
-}
 @media screen and (min-width:800px) {
 
   .home{
@@ -170,23 +158,21 @@ footer{
 	.intro{
 		display: block;
 	}
+
 	#container{
 		width:95%;
+		margin:0 auto;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-gap:0;
-		grid-template-areas:
-		"a b b b";
+		grid-template-columns: 1fr 3fr;
+		grid-gap:5px;
 	}
 	.intro{
-		grid-area:a;
 		border-right: 1px solid black;
-		padding-right:15px;
+		padding-right:10px;
 	}
 	.story{
-		grid-area:b;
 		margin-left: 0;
-		padding-left: 3px;
+		padding-left: 5px;
 	}
 	.forwide{
 		display: block;
