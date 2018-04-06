@@ -62,7 +62,7 @@ img {
 /*-------end of header----------------*/
 
 .atitle{
-	font: font-family: 'PT Sans', Helvetica, sans-serif;
+	font-family: 'PT Sans', Helvetica, sans-serif;
 	color: black;
 	font-size: 24px;
 	font-weight: bold;
@@ -73,20 +73,25 @@ article{
   margin-bottom: 0.7em;
   border-bottom: 1px solid #ccc;
 }
+article:last-of-type{
+	border-bottom: none;
+}
 
 .articlehead{
-	background: black;
+	background: #1e3030;
 	display: block;
 	color:white;
 	font-weight: bold;
 	font-size: 18px;
-	padding: 10px;
+	padding:8px;
 }
 
 footer{
+	display: block;
 	font-size:10px;
 	color:black;
 	font-style: italic;
+	border-top:1px solid black;
 }
 
 /*These styles activate when the page is larger than 800px wide*/
