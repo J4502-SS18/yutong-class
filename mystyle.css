@@ -2,133 +2,195 @@ p {
 	color: #666666;
   font-family: 'PT Sans', Helvetica, sans-serif;
 }
-h1,h6,h3{
+h1{
 	font-family: 'PT Serif', Georgia, serif;
-}
-h1 {
-	color: #1f3d7a;
-}
-h6{
-	font-size: 10px;
-	color: #666666;
-}
-h3{
-	font-size: 18px;
-	color: #1f3d7a;
+	color: black;
 }
 
 /*Navigation style*/
 
-.navigation {
+nav ul {
 	font-family: 'Merriweather Sans',Helvetica, sans-serif;
+	color:white;
 	list-style: none;
 	margin: 0px;
-	background-color: #00b8e6;
+	background-color: BLACK;
 	padding:0px;
 	display: flex;
-	flex-direction:column;
+	flex-flow: column;
+	justify-content: space-between;
 }
 
-.navigation a {
+
+nav ul a {
 	text-decoration: none;
 	display: block;
 	color: white;
-		text-align: center;
-		padding: 5px;
-		margin: 5px;
-
+	text-align: center;
+	margin: 5px;
 }
 
+
+nav ul li{
+padding: 0;
+}
+
+.pic1, .pic2, .pic3{
+	display: none;
+}
+.intro{
+	display: block;
+}
+
+.home{
+	text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
 
 img {
 	border: none;
 	width:100%;
 }
-/*Colors for different parts of page*/
-header{
-	background: #b9f2ff;
+
+.forwide{
+	display: none;
 }
 
-footer{
-	background:#27c4ff;
-	border-top: 1px solid #4775d1;
-	font-size:10px;
-	color:black;
-	font-style: italic;
-	margin: 0;
+/*-------end of header----------------*/
+
+.atitle{
+	font: font-family: 'PT Sans', Helvetica, sans-serif;
+	color: black;
+	font-size: 24px;
+	font-weight: bold;
+	padding:0;
 }
 
 article{
-	background: #b3b6ff;
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid #ccc;
 }
 
-.aside1{
-	background: #b1d4ff;
-}
-.aside2{
-	background: #ff99d1;
-}
-.caption{
-	font-size: 12px;
-	text-align:right;
-	font-style: italic;
-	margin-top:0;
-	margin-bottom: 0;
-}
-/*Setting up flexible boxes for our content*/
-.wrapper{
-	display: flex;
-	flex-flow: row wrap;
-}
-
-header, article, aside, footer{
-	flex: 1 100%;
+.articlehead{
+	background: black;
+	display: block;
+	color:white;
+	font-weight: bold;
+	font-size: 18px;
 	padding: 10px;
+}
+
+footer{
+	font-size:10px;
+	color:black;
+	font-style: italic;
 }
 
 /*These styles activate when the page is larger than 800px wide*/
 
-@media (min-width:800px) {
-	.navigation {
-		flex-flow: row wrap;
-		justify-content:space-around;
-	}
-	.navigation a {
-		border: none;
-	}
-	.navigation a:hover{
-		background: #00ace6;
-	}
-	aside{
-		flex:1;
+@media screen and (min-width: 450px) {
+	nav ul{
+		flex-direction: row;
+		justify-content:space-between;
+		align-items: baseline;
+  	}
+		nav ul li{
+			padding: 10px;
+		}
+		.pic1, .pic2, .pic3, .pic4{
+			display: block;
+		}
+		.intro{
+			display: grid;
+			grid-template-columns: 250px 1fr 1fr;
+			grid-gap: 5px;
+			grid-template-areas:
+			"a b c"
+			"a d e";
+			margin-top: 5px;
+		}
+
+		.words{
+			grid-area:a;
+		}
+		.pic1 {
+			grid-area:b;
+		}
+		.pic2 {
+			grid-area:c;
+		}
+		.pic3 {
+			grid-area:d;
+		}
+		.pic4 {
+			grid-area:e;
+		}
+		.forwide{
+			display: none;
+		}
+}
+
+@media screen and (min-width: 600px) {
+
+  #container{
+    width: 95%;
+		margin-left:auto;
+		margin-right:auto;
+  }
+	.intro{
+		padding-left: 10px;
 	}
 	article{
-		flex:3 0px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
-	.aside1{
-		order: 1;
+	.forwide{
+		display: none;
 	}
-	article{
-		order: 2;
+}
+@media screen and (min-width:800px) {
+
+  .home{
+    margin-right:auto;
+  }
+  nav ul li{
+    margin: 5px;
+  }
+	.pic1, .pic2, .pic3{
+		display: none;
 	}
-	.aside2{
-		order:3;
+	.intro{
+		display: block;
 	}
-	footer{
-		order:4;
+	#container{
+		width:95%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap:0;
+		grid-template-areas:
+		"a b b b";
 	}
-	article {
-		display: flex;
-		flex-flow: row nowrap;
+	.intro{
+		grid-area:a;
+		border-right: 1px solid black;
+		padding-right:15px;
 	}
-	.image{
-		width:50%;
-		margin-right: 10px;
+	.story{
+		grid-area:b;
+		margin-left: 0;
+		padding-left: 3px;
 	}
-	.joke{
-		width:50%;
+	.forwide{
+		display: block;
 	}
-  .first {
-		margin-top:0;
+	.articlehead{
+		display: none;
 	}
+	.atitle {
+		margin-top: 35px;
+	}
+
 }
