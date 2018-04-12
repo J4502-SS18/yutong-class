@@ -6,7 +6,34 @@ h1{
 	font-family: 'PT Serif', Georgia, serif;
 	color: black;
 }
+/*new codes*/
+header {
+	display: flex;
+	flex-flow: row;
+	background-color: black;
+	align-items:baseline;
+}
 
+.menu-trigger{
+	order:1;
+	color:white;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+nav a{
+	text-decoration: none;
+}
+
+header h1{
+	order:2;
+	color:white;
+	padding:10px;
+	margin-left: 10px;
+}
+nav ul {
+    display: none;
+}
+/*new codes end*/
 /*Navigation style*/
 
 nav ul {
@@ -16,9 +43,11 @@ nav ul {
 	margin: 0px;
 	background-color: BLACK;
 	padding:0px;
+	/* new codes
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
+	*/
 }
 
 
@@ -30,9 +59,10 @@ nav ul a {
 	margin: 5px;
 }
 
-
 nav ul li{
-padding: 0;
+padding: 5px;
+margin-top: 5px;
+border-top: 1px solid #ccc;
 }
 
 .pic1, .pic2, .pic3{
@@ -42,13 +72,13 @@ padding: 0;
 	display: block;
 }
 
-.home{
+/*.home{
 	text-decoration: none;
 	display: block;
 	color: white;
 	text-align: center;
 	margin: 0;
-}
+}*/
 
 img {
 	border: none;
@@ -85,6 +115,9 @@ article:last-of-type{
 	font-size: 18px;
 	padding:8px;
 }
+.atile{
+	color: white;
+}
 
 /*-footer-*/
 
@@ -99,13 +132,40 @@ footer{
 /*These styles activate when the size of page changese*/
 
 @media screen and (min-width: 600px) {
+	.menu-trigger{
+		display: none;
+	}
+	header{
+		align-items: baseline;
+		background-color: black;
+	}
 	nav ul{
+		display: block;
+		}
+	nav ul{
+		display: flex;
 		flex-direction: row;
 		justify-content:space-between;
 		align-items: baseline;
   	}
+	nav ul li{
+		border-top: none;
+	}
+		header h1 {
+        order: 1;
+    }
+    nav {
+        order: 2;
+    }
 		nav ul li{
 			padding: 10px;
+		}
+		nav ul a {
+			text-decoration: none;
+			display: block;
+			color: white;
+			text-align: center;
+			margin: 5px;
 		}
 		.pic1, .pic2, .pic3, .pic4{
 			display: block;
@@ -146,7 +206,11 @@ footer{
 
 @media screen and (min-width:800px) {
 
-  .home{
+	header{
+		display: flex;
+		flex-direction: row;
+	}
+  header h1{
     margin-right:auto;
   }
   nav ul li{
