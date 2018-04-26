@@ -128,6 +128,9 @@ footer{
 	font-style: italic;
 	border-top:1px solid black;
 }
+.map-wrapper{
+	display: none;
+}
 
 /*These styles activate when the size of page changese*/
 
@@ -202,6 +205,9 @@ footer{
 			width:95%;
 			margin:0 auto;
 		}
+		.map-wrapper{
+			display: none;
+		}
 }
 
 @media screen and (min-width:800px) {
@@ -247,5 +253,20 @@ footer{
 	.atitle {
 		margin-top: 35px;
 	}
-
+	.map-wrapper{
+		display: block;
+    overflow:hidden;
+		padding-top: 60%;
+    padding-bottom:60%;
+    position:relative;
+    height:0;
+		margin-top:10px;
+	}
+	.map-wrapper iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+	}
 }
